@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assinatura | Bootstrap Estudo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+<div class="container py-2">
+<a class="navbar-brand" href="index.html"><span class="brand-mark">B</span><span>bootstrap<span class="brand-dot">.</span>estudo</span></a>
+<div class="d-flex gap-2"><a href="index.html" class="btn btn-outline-dark btn-sm">Voltar</a><button class="btn theme-btn" id="temaBtn">🌙</button></div>
+</div>
+</nav>
+
+<main class="subscription">
+<div class="container">
+<div class="text-center intro-sub">
+<span class="small-label">ASSINATURA</span>
+<h1>Escolha uma forma de<br><span>continuar aprendendo.</span></h1>
+<p class="text-secondary">Uma página simples de planos para complementar o projeto.</p>
+</div>
+<div class="row g-4 justify-content-center">
+<div class="col-md-6 col-lg-4"><div class="plan"><small>PLANO 01</small><h2>Gratuito</h2><p>Para começar.</p><strong>R$ 0</strong><span>/ mês</span><hr><ul><li>Conteúdo básico</li><li>Exemplos de Bootstrap</li><li>Materiais para estudo</li></ul><button class="btn btn-outline-primary w-100" onclick="escolher('Gratuito')">Escolher</button></div></div>
+<div class="col-md-6 col-lg-4"><div class="plan destaque"><b class="tag">RECOMENDADO</b><small>PLANO 02</small><h2>Estudante</h2><p>Para aprender mais.</p><strong>R$ 19,90</strong><span>/ mês</span><hr><ul><li>Conteúdo completo</li><li>Exercícios extras</li><li>Suporte para projetos</li></ul><button class="btn btn-primary w-100" onclick="escolher('Estudante')">Assinar</button></div></div>
+<div class="col-md-6 col-lg-4"><div class="plan"><small>PLANO 03</small><h2>Profissional</h2><p>Para projetos maiores.</p><strong>R$ 49,90</strong><span>/ mês</span><hr><ul><li>Todos os recursos</li><li>Suporte prioritário</li><li>Análise de projetos</li></ul><button class="btn btn-outline-primary w-100" onclick="escolher('Profissional')">Escolher</button></div></div>
+</div>
+<div class="signup-form">
+<div class="row g-4">
+<div class="col-12"><h2>Finalizar assinatura</h2><p class="text-secondary">Preencha os dados para fazer uma simulação.</p></div>
+<div class="col-md-4"><label class="form-label">Nome</label><input id="nome" class="form-control" placeholder="Seu nome"></div>
+<div class="col-md-4"><label class="form-label">E-mail</label><input id="email" type="email" class="form-control" placeholder="seu@email.com"></div>
+<div class="col-md-4"><label class="form-label">Plano</label><select id="plano" class="form-select"><option>Estudante</option><option>Gratuito</option><option>Profissional</option></select></div>
+<div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-3"><small class="text-secondary">Simulação para fins escolares.</small><button class="btn btn-primary" onclick="finalizar()">Confirmar assinatura</button></div>
+</div>
+</div>
+</div>
+</main>
+<footer><div class="container d-flex justify-content-between flex-wrap gap-2"><span>bootstrap.estudo</span><span>Trabalho de Programação</span></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+function escolher(plano){document.getElementById("plano").value=plano;document.querySelector(".signup-form").scrollIntoView({behavior:"smooth"})}
+function finalizar(){let nome=document.getElementById("nome").value.trim(),email=document.getElementById("email").value.trim(),plano=document.getElementById("plano").value;if(!nome||!email){alert("Preencha seu nome e e-mail.");return}alert("Assinatura simulada com sucesso!\\nPlano: "+plano)}
+</script>
+</body>
+</html>
