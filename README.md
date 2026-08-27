@@ -1,6 +1,6 @@
 # Projeto Bootstrap
 
-trabalho de Lab. de Progamação II 
+Trabalho de Lab. de Progamação II 
 
 # Integrantes
 
