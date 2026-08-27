@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Assinatura | Bootstrap Estudo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .payment-option {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .payment-option input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .payment-option span {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 12px 14px;
+      border: 1px solid #d8cbe9;
+      border-radius: 8px;
+      background: #fff;
+      font-weight: 700;
+      color: #40384b;
+      transition: 0.2s ease;
+    }
+
+    .payment-option i {
+      color: var(--roxo);
+      font-size: 1.15rem;
+    }
+
+    .payment-option input:checked + span {
+      border-color: var(--roxo);
+      box-shadow: 0 0 0 0.18rem rgba(111, 44, 255, 0.12);
+      background: var(--roxo-muito-claro);
+    }
+
+    .plan p strong {
+      color: var(--roxo);
+    }
+
+    .plan li strong {
+      color: #3f2a5c;
+    }
+
+    .plan-callout {
+      margin: 18px 0;
+      padding: 12px 14px;
+      border-left: 3px solid var(--roxo);
+      background: var(--roxo-muito-claro);
+      color: #554e61;
+      font-size: 0.84rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container py-2">
+
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark">B</span>
+        <span>bootstrap<span class="brand-dot">.</span>estudo</span>
+      </a>
+
+      <div>
+        <a href="index.html" class="btn btn-outline-dark btn-sm">
+          Voltar
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <main class="subscription">
+
+    <div class="container">
+
+      <div class="text-center intro-sub">
+        <span class="small-label">ASSINATURA</span>
+
+        <h1>
+          Escolha uma forma de<br>
+          <span>continuar aprendendo.</span>
+        </h1>
+
+        <p class="text-secondary">
+          Escolha a experiência ideal para aprender Bootstrap,
+          praticar componentes e acelerar seus projetos.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="plan">
+
+            <small>PLANO 01 · EXPERIÊNCIA</small>
+
+            <h2>Gratuito</h2>
+
+            <p>
+              Experimente o Bootstrap Estudo por
+              <strong>7 dias</strong> e descubra uma forma mais
+              prática de aprender a criar interfaces.
+            </p>
+
+            <strong>R$ 0</strong>
+            <span>/ 7 dias</span>
+
+            <hr>
+
+            <ul>
+              <li>7 dias de acesso à plataforma</li>
+              <li>Introdução à estrutura do Bootstrap 5</li>
+              <li>Prática com Container, Grid e Breakpoints</li>
+              <li>Componentes essenciais: Botões, Cards, Alerts e Navbar</li>
+              <li>Exemplos básicos de formulários responsivos</li>
+            </ul>
+
+            <button class="btn btn-outline-primary w-100" onclick="escolher('Gratuito')">
+              Começar experiência
+            </button>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="plan destaque">
+
+            <b class="tag">MAIS POPULAR</b>
+
+            <small>PLANO 02 · ESTUDANTE</small>
+
+            <h2>Estudante</h2>
+
+            <p>
+              <strong>Vá além do básico.</strong>
+              Um plano pensado para quem quer dominar Bootstrap
+              e montar projetos completos com mais segurança e rapidez.
+            </p>
+
+            <strong>R$ 67,99</strong>
+            <span>/ mês</span>
+
+            <hr>
+
+            <ul>
+              <li>
+                <strong>Tudo do plano Gratuito</strong>,
+                sem limite de 7 dias
+              </li>
+
+              <li>
+                Bootstrap 5 completo: Grid, Utilities e Layout
+              </li>
+
+              <li>
+                Componentes avançados: Modal, Offcanvas,
+                Accordion, Carousel e Tabs
+              </li>
+
+              <li>
+                Projetos guiados e desafios práticos
+              </li>
+
+              <li>
+                Templates e exemplos de páginas responsivas
+              </li>
+
+              <li>
+                Formulários, validação e personalização com CSS
+              </li>
+
+              <li>
+                Novos conteúdos e exercícios durante a assinatura
+              </li>
+            </ul>
+
+            <div class="plan-callout">
+              Ideal para quem quer transformar conhecimento em
+              projetos reais e criar sites modernos mais rápido.
+            </div>
+
+            <button class="btn btn-primary w-100" onclick="escolher('Estudante')">
+              Quero evoluir agora
+            </button>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="plan">
+
+            <small>PLANO 03 · PROFISSIONAL</small>
+
+            <h2>Profissional</h2>
+
+            <p>
+              <strong>A experiência completa.</strong>
+              Para quem quer todos os recursos de estudo,
+              mais profundidade e ferramentas para desenvolver
+              projetos de maior nível.
+            </p>
+
+            <strong>R$ 667,67</strong>
+            <span>/ mês</span>
+
+            <hr>
+
+            <ul>
+              <li>
+                <strong>Tudo que o plano Estudante oferece</strong>
+              </li>
+
+              <li>
+                Conteúdo avançado de customização e organização
+                de interfaces
+              </li>
+
+              <li>
+                Projetos completos com Navbar, Dashboard,
+                Landing Page e páginas de assinatura
+              </li>
+
+              <li>
+                Biblioteca premium de layouts e componentes reutilizáveis
+              </li>
+
+              <li>
+                Desafios avançados para montar um portfólio
+              </li>
+
+              <li>
+                Suporte prioritário para dúvidas sobre projetos
+              </li>
+
+              <li>
+                Conteúdos exclusivos e trilhas avançadas
+              </li>
+            </ul>
+
+            <div class="plan-callout">
+              Para quem não quer apenas aprender Bootstrap:
+              quer acelerar a criação de interfaces profissionais.
+            </div>
+
+            <button class="btn btn-outline-primary w-100" onclick="escolher('Profissional')">
+              Assinar Profissional
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="signup-form">
+
+        <div class="row g-4">
+
+          <div class="col-12">
+            <h2>Finalizar assinatura</h2>
+
+            <p class="text-secondary">
+              Preencha os dados para fazer uma simulação.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+
+            <label class="form-label">Nome</label>
+
+            <input
+              id="nome"
+              class="form-control"
+              placeholder="Seu nome"
+            >
+
+          </div>
+
+          <div class="col-md-4">
+
+            <label class="form-label">E-mail</label>
+
+            <input
+              id="email"
+              type="email"
+              class="form-control"
+              placeholder="seu@email.com"
+            >
+
+          </div>
+
+          <div class="col-md-4">
+
+            <label class="form-label">Plano</label>
+
+            <select id="plano" class="form-select">
+              <option>Gratuito</option>
+              <option selected>Estudante</option>
+              <option>Profissional</option>
+            </select>
+
+          </div>
+
+          <div class="col-12">
+
+            <label class="form-label fw-bold">
+              Forma de pagamento
+            </label>
+
+            <div class="payment-grid">
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="pagamento"
+                  value="Cartão de crédito"
+                  checked
+                >
+
+                <span>
+                  <i class="bi bi-credit-card-2-front"></i>
+                  Cartão de crédito
+                </span>
+
+              </label>
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="pagamento"
+                  value="PayPal"
+                >
+
+                <span>
+                  <i class="bi bi-paypal"></i>
+                  PayPal
+                </span>
+
+              </label>
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="pagamento"
+                  value="Cartão de débito"
+                >
+
+                <span>
+                  <i class="bi bi-credit-card"></i>
+                  Cartão de débito
+                </span>
+
+              </label>
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="pagamento"
+                  value="Pix"
+                >
+
+                <span>
+                  <i class="bi bi-qr-code-scan"></i>
+                  Pix
+                </span>
+
+              </label>
+
+              <label class="payment-option">
+
+                <input
+                  type="radio"
+                  name="pagamento"
+                  value="Boleto bancário"
+                >
+
+                <span>
+                  <i class="bi bi-upc-scan"></i>
+                  Boleto bancário
+                </span>
+
+              </label>
+
+            </div>
+
+            <small class="text-secondary d-block mt-2">
+              Ambiente de pagamento apenas para simulação escolar.
+              Nenhuma cobrança real será realizada.
+            </small>
+
+          </div>
+
+          <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+            <small class="text-secondary">
+              Simulação para fins escolares.
+            </small>
+
+            <button
+              class="btn btn-primary"
+              onclick="finalizar()"
+            >
+              Confirmar assinatura
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+
+          <h3>Contato</h3>
+
+          <p>
+            <a href="tel:38310349">
+              Telefone: 3831-0349
+            </a>
+          </p>
+
+          <p>
+            <a href="mailto:support@Bootstrap.com.br">
+              support@Bootstrap.com.br
+            </a>
+          </p>
+
+          <p>
+            Sede em Patrocínio MG - Brasil<br>
+            CEP: 38747-792
+          </p>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <h3>Desenvolvedores</h3>
+
+          <p>
+            <a
+              href="https://github.com/vitorlimane"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vitor Lima
+            </a>
+          </p>
+
+          <p>Gabriel Vilas boas</p>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <h3>Base de conhecimento</h3>
+
+          <p>
+            <a
+              href="https://getbootstrap.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bootstrap
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://www.canva.com/pt_br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Canva
+            </a>
+          </p>
+
+          <h3 class="footer-subtitle">
+            Informações
+          </h3>
+
+          <p>
+            <a
+              href="https://www.microsoft.com/pt-br/privacy/privacystatement"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Política de privacidade
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://www.microsoft.com/en-us/legal/terms-of-use"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Termos de uso
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="footer-action">
+
+        <div>
+          <strong>Quer continuar aprendendo?</strong>
+
+          <span>
+            Volte para a página principal ou conheça nossos conteúdos.
+          </span>
+        </div>
+
+        <a href="index.html" class="btn btn-primary">
+          Voltar ao início
+        </a>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          <strong>bootstrap.estudo</strong>
+          · Trabalho de Programação
+        </span>
+
+        <span>
+          HTML · CSS · JavaScript · Bootstrap
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    function escolher(plano) {
+
+      document.getElementById("plano").value = plano;
+
+      document.querySelector(".signup-form").scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }
+
+    function finalizar() {
+
+      let nome = document.getElementById("nome").value.trim();
+
+      let email = document.getElementById("email").value.trim();
+
+      let plano = document.getElementById("plano").value;
+
+      let pagamento = document.querySelector(
+        'input[name="pagamento"]:checked'
+      ).value;
+
+      if (!nome || !email) {
+
+        alert("Preencha seu nome e e-mail.");
+
+        return;
+
+      }
+
+      alert(
+        "Assinatura simulada com sucesso!" +
+        "\n\nPlano: " + plano +
+        "\nForma de pagamento: " + pagamento
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>

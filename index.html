@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bootstrap.estudo | Guia de Estudo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+<div class="container py-2">
+<a class="navbar-brand" href="#inicio"><span class="brand-mark">B</span><span>bootstrap<span class="brand-dot">.</span>estudo</span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+<li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+<li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
+<li class="nav-item"><a class="nav-link" href="#exemplos">Exemplos</a></li>
+<li class="nav-item"><a class="nav-link" href="#duvidas">Dúvidas</a></li>
+<li class="nav-item"><a class="btn btn-dark nav-button" href="assinatura.html">Assinar</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<header id="inicio" class="hero hero-art" aria-label="Apresentação do Bootstrap">
+  <div class="hero-art-content">
+    <div class="hero-copy">
+      <div class="hero-copy-inner">
+        <p class="hero-kicker">ACELERE SUA WEB COM</p>
+        <h1>BOOTSTRAP</h1>
+        <p class="hero-subtitle">Design <strong>moderno.</strong> Código <strong>ágil.</strong> Resultados <strong>reais.</strong></p>
+        <div class="hero-actions">
+          <a href="#sobre" class="hero-action hero-action-primary">
+            <i class="bi bi-rocket-takeoff-fill hero-action-icon" aria-hidden="true"></i>
+            <span>Começar agora</span>
+          </a>
+          <a href="#exemplos" class="hero-action hero-action-secondary">
+            <i class="bi bi-code-slash hero-code-icon" aria-hidden="true"></i>
+            <span>Ver exemplos</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="sobre" class="section">
+<div class="container">
+<div class="section-heading">
+<span class="number">01</span>
+<div><span class="small-label">SOBRE O FRAMEWORK</span><h2>O que é Bootstrap?</h2></div>
+</div>
+<div class="row align-items-center g-5">
+<div class="col-lg-7">
+<p class="large-text">Bootstrap é um framework front-end que reúne componentes e classes prontas para ajudar no desenvolvimento de páginas web.</p>
+<p class="text-secondary">Em vez de criar tudo do zero, podemos usar recursos como botões, cards, menus, formulários e o sistema de Grid. Assim, fica mais fácil organizar o site e fazer com que ele funcione em diferentes tamanhos de tela.</p>
+</div>
+<div class="col-lg-5">
+<div class="simple-note code-image-note">
+  <img src="assets/exemplo-css.png" alt="Exemplo de código CSS" class="img-fluid">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="vantagens" class="section purple-section">
+<div class="container">
+<div class="section-heading">
+<span class="number">02</span>
+<div><span class="small-label">POR QUE USAR?</span><h2>Vantagens</h2></div>
+</div>
+<div class="row g-3">
+<div class="col-md-6 col-lg-3"><article class="clean-card"><span>01</span><h3>Prático</h3><p>Possui muitos elementos que já podem ser usados no projeto.</p></article></div>
+<div class="col-md-6 col-lg-3"><article class="clean-card"><span>02</span><h3>Responsivo</h3><p>O Grid ajuda a organizar a página em celulares e computadores.</p></article></div>
+<div class="col-md-6 col-lg-3"><article class="clean-card"><span>03</span><h3>Organizado</h3><p>As classes ajudam a manter um padrão visual entre os elementos.</p></article></div>
+<div class="col-md-6 col-lg-3"><article class="clean-card"><span>04</span><h3>Gratuito</h3><p>É um projeto open source que pode ser usado em diversos trabalhos.</p></article></div>
+</div>
+</div>
+</section>
+
+<section id="exemplos" class="section">
+<div class="container">
+<div class="section-heading">
+<span class="number">03</span>
+<div><span class="small-label">NA PRÁTICA</span><h2>Alguns exemplos</h2></div>
+</div>
+<div class="row g-4">
+<div class="col-lg-7">
+<div class="example-area">
+<div class="example-head"><span>COMPONENTES</span><span>BOOTSTRAP</span></div>
+<div class="demo-line"><div><small>BOTÃO</small><p>Uma ação simples para o usuário.</p></div><button class="btn btn-primary">Clique aqui</button></div>
+<div class="demo-line"><div><small>ALERTA</small><p>Uma mensagem para chamar atenção.</p></div><div class="alert alert-primary py-2 mb-0">Tudo certo!</div></div>
+<div class="demo-line"><div><small>MODAL</small><p>Uma pequena janela sobre a página.</p></div><button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalExemplo">Abrir</button></div>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="example-image">
+<img src="tema-tecnologia.jpg" alt="Imagem de programação">
+<div><span>PROJETO ESCOLAR</span><strong>Bootstrap na prática</strong></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="duvidas" class="section purple-section">
+<div class="container">
+<div class="row g-5">
+<div class="col-lg-5">
+<span class="small-label">04 · DÚVIDAS</span>
+<h2 class="mt-2">Perguntas<br>frequentes</h2>
+<p class="text-secondary">Algumas dúvidas comuns para quem está começando.</p>
+</div>
+<div class="col-lg-7">
+<div class="accordion" id="faq">
+<div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">Bootstrap é uma linguagem?</button></h2><div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Não. Bootstrap é um framework que trabalha principalmente com HTML, CSS e JavaScript.</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Preciso saber CSS?</button></h2><div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">É recomendado ter uma noção de HTML e CSS, porque o Bootstrap facilita o trabalho, mas não substitui o aprendizado desses conceitos.</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">Ele funciona no celular?</button></h2><div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sim. O sistema de Grid do Bootstrap foi feito para criar layouts que se adaptam a diferentes tamanhos de tela.</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="final-section">
+<div class="container text-center">
+<span class="small-label">CONCLUSÃO</span>
+<h2>Comece simples.<br><span>Aprenda fazendo.</span></h2>
+<p class="text-secondary mx-auto">Este projeto mostra alguns dos principais conceitos do Bootstrap de uma forma direta e fácil de entender.</p>
+<a href="assinatura.html" class="btn btn-primary mt-3">Conhecer a assinatura</a>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-4">
+<h3>Contato</h3>
+<p><a href="tel:38310349">Telefone: 3831-0349</a></p>
+<p><a href="mailto:support@Bootstrap.com.br">support@Bootstrap.com.br</a></p>
+<p>Sede em Patrocínio MG - Brasil<br>CEP: 38747-792</p>
+</div>
+
+<div class="col-md-4">
+<h3>Desenvolvedores</h3>
+<p><a href="https://github.com/vitorlimane" target="_blank" rel="noopener noreferrer">Vitor Lima</a></p>
+<p>Gabriel Vilas boas</p>
+</div>
+
+<div class="col-md-4">
+<h3>Base de conhecimento</h3>
+<p><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a></p>
+<p><a href="https://www.canva.com/pt_br/" target="_blank" rel="noopener noreferrer">Canva</a></p>
+
+<h3 class="footer-subtitle">Informações</h3>
+<p><a href="https://www.microsoft.com/pt-br/privacy/privacystatement" target="_blank" rel="noopener noreferrer">Política de privacidade</a></p>
+<p><a href="https://www.microsoft.com/en-us/legal/terms-of-use" target="_blank" rel="noopener noreferrer">Termos de uso</a></p>
+</div>
+</div>
+
+<div class="footer-action">
+<div>
+<strong>Pronto para continuar?</strong>
+<span>Conheça a página de assinatura do projeto.</span>
+</div>
+<a href="assinatura.html" class="btn btn-primary">Garanta agora</a>
+</div>
+
+<div class="footer-bottom">
+<span><strong>bootstrap.estudo</strong> · Trabalho de Programação</span>
+<span>HTML · CSS · JavaScript · Bootstrap</span>
+</div>
+</div>
+</footer>
+
+<div class="modal fade" id="modalExemplo" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5>Modal Bootstrap</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">Este é um exemplo de componente do Bootstrap usado no projeto.</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
